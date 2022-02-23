@@ -131,8 +131,8 @@ namespace EPGViewer
             var list = new List<string>();
             foreach (var show in showItems)
             {
-                show.StartTime = show.StartTime.AddMinutes(-marginMinutes);
-                show.EndTime = show.EndTime.AddMinutes(marginMinutes);
+                var startTime = show.StartTime.AddMinutes(-marginMinutes);
+                var endTime = show.EndTime.AddMinutes(marginMinutes);
                 var template = templateOri;
                 if (template.Contains("${ChannelName}"))
                 {
@@ -159,7 +159,7 @@ namespace EPGViewer
                         try
                         {
                             var match = item;
-                            var dateTime = match.Value.StartsWith("${StartTime") ? show.StartTime : show.EndTime;
+                            var dateTime = match.Value.StartsWith("${StartTime") ? startTime : endTime;
                             template = template.Replace(match.Value, dateTime.ToString(match.Groups[2].Value));
                         }
                         catch (Exception)
