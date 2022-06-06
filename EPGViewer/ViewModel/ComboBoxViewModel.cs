@@ -37,7 +37,7 @@ namespace EPGViewer.ViewModel
                     new ChannelItem("CCTV-11", "cctv11"),
                     new ChannelItem("CCTV-12", "cctv12"),
                     new ChannelItem("CCTV-13", "cctv13"),
-                    new ChannelItem("CCTV-14", "cctv14"),
+                    new ChannelItem("CCTV-14", "cctvchild"),
                     new ChannelItem("CCTV-15", "cctv15"),
                     new ChannelItem("CCTV-16", "cctv16"),
                     new ChannelItem("CCTV-17", "cctv17"),
