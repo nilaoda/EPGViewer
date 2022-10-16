@@ -144,11 +144,11 @@ namespace EPGViewer
                 }
                 if (template.Contains("${StartTimestamp}"))
                 {
-                    template = template.Replace("${StartTimestamp}", (show.StartTimestamp - (marginMinutes * 60 * 1000)).ToString());
+                    template = template.Replace("${StartTimestamp}", (show.StartTimestamp - (marginMinutes * 60)).ToString());
                 }
                 if (template.Contains("${EndTimestamp}"))
                 {
-                    template = template.Replace("${EndTimestamp}", (show.EndTimestamp + (marginMinutes * 60 * 1000)).ToString());
+                    template = template.Replace("${EndTimestamp}", (show.EndTimestamp + (marginMinutes * 60)).ToString());
                 }
                 //处理自定义日期
                 var reg = new Regex("\\${(StartTime|EndTime)\\('(.*?)'\\)}");
